@@ -1,22 +1,18 @@
-LiveDeck v0.8.8
-Build ID: v0.8.8-20260830-delta-update-bridge
+LiveDeck v0.8.9
+Build ID: v0.8.9-20260830-mirrativ-oauth-return-sticky-settings
 
 主な変更
-- MirrativからXへログインするとき、LiveDeckと同じMirrativセッションを使うアプリ内認証ウィンドウへ修正しました。
-- 別ウィンドウ表示中の配信枠を本体側にも表示し、個別または一括で本体へ戻せるようにしました。
-- v0.8.8を差分更新bridge Releaseとし、v0.8.8以降のクライアントを署名済みdelta package方式へ移行しました。
-- 差分更新は現在のVersion/Build IDと管理ファイルSHA-256を検証し、stagingで差分適用・最終manifest検証・health-check後に安全に置換します。失敗時はrollbackします。
-- 差分更新を適用できない場合はGitHub Fullではなく、保護された https://dl.irodoli.com/ の最新Full Setupへ案内します。
+- MirrativからXへ認証した後、MirrativのOAuth callback処理完了を検知して認証子ウィンドウを閉じ、元のMirrativ枠を自動再読込するようにしました。
+- X側の「アクセス権限がありません」等の最終ページが残っていても、Mirrativ callbackが成立済みならログイン状態を元枠へ反映できるようにしました。
+- 設定画面は内容部分だけをスクロールし、「キャンセル」「保存」を下部固定で常時操作できるようにしました。
 
-旧版からv0.8.8への移行
-- v0.8.5などv0.8.8未満の旧Updaterは新しい delta-latest.json を読みません。
-- そのため、旧版からv0.8.8へは https://dl.irodoli.com/ のv0.8.8 Full Setupを一度だけ上書きインストールしてください。
-- v0.8.8へ到達後は、以後の対応Releaseを新しい署名済みdelta channelで更新できます。
+更新方式
+- v0.8.8からv0.8.9は署名済みdelta packageで更新します。
+- Full SetupはGitHubへ公開せず、最新Full Setupは https://dl.irodoli.com/ のみです。
+- delta chain不一致、base不一致、検証/health-check失敗時はConoHa Full Setupへ誘導します。
 
-配布方針
-- 最新Full Setup: https://dl.irodoli.com/
-- GitHub: delta package + signed manifest + Release Notesのみ
-- v0.8.8 bridgeでは新しいGitHub Full Setup / Full payload / Source ZIPを公開しません。
-
-注意
-- Windows SetupはAuthenticode未署名のため、環境によってSmartScreen / Smart App Controlの警告やブロックが発生する場合があります。
+検証
+- Linux final verify: 145/145 PASS
+- Setup/product focused after measured pins: 21/21 PASS
+- Windows package summary: PASS / parser errors 0 / embed verifier PASS
+- Windows GUI focused acceptanceはApplication Controlがunsigned candidateを起動前に遮断したため未自動化。

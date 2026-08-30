@@ -1,0 +1,20 @@
+{
+  "format": "LiveDeckDeltaChannelManifest",
+  "schemaVersion": 2,
+  "targetVersion": "0.8.8",
+  "targetBuildId": "v0.8.8-20260830-delta-update-bridge",
+  "publishedAt": "2026-08-30T01:37:32.000Z",
+  "releaseNotesUrl": "https://raw.githubusercontent.com/irodoli/LiveDeck-Releases/main/RELEASE_NOTES.txt",
+  "recoveryUrl": "https://dl.irodoli.com/",
+  "importance": "recommended",
+  "summary": "LiveDeck v0.8.8 - delta-update bridge",
+  "changes": [
+    "Mirrativ Xログインを同一セッション認証へ修正",
+    "別ウィンドウ中の枠を本体から復帰可能に改善",
+    "署名済み差分更新bridgeへ移行"
+  ],
+  "deltas": [],
+  "signatureAlgorithm": "ed25519",
+  "keyId": "25e92e67c383e514",
+  "signature": "Ism//oY61VnsVfif0E10SS6f9MJjz5PFplUxQNKHYEVtAELZ/ptrqYUEGt2HbEr6aKRotgKc1RVa+lq/1sSpDA=="
+}

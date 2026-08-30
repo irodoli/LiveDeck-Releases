@@ -1,0 +1,17 @@
+LiveDeck v0.8.8
+Build ID: v0.8.8-20260830-delta-update-bridge
+
+主な変更
+- MirrativからXへログインするとき、LiveDeckと同じMirrativセッションを使うアプリ内認証ウィンドウへ修正しました。
+- 別ウィンドウ表示中の配信枠を本体側にも表示し、個別または一括で本体へ戻せるようにしました。
+- v0.8.8を差分更新bridge Releaseとし、今後の更新を署名済みdelta package方式へ移行しました。
+- 差分更新は現在のVersion/Build IDと管理ファイルSHA-256を検証し、stagingで差分適用・最終manifest検証・health-check後に安全に置換します。失敗時はrollbackします。
+- 差分更新を適用できない場合はGitHub Fullではなく、保護された https://dl.irodoli.com/ の最新Full Setupへ案内します。
+
+配布方針
+- 最新Full Setup: https://dl.irodoli.com/
+- GitHub: delta package + signed manifest + Release Notesのみ
+- v0.8.8 bridgeでは新しいGitHub Full Setup / Full payload / Source ZIPを公開しません。
+
+注意
+- Windows SetupはAuthenticode未署名のため、環境によってSmartScreen / Smart App Controlの警告やブロックが発生する場合があります。

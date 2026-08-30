@@ -1,18 +1,9 @@
-LiveDeck v0.8.9
-Build ID: v0.8.9-20260830-mirrativ-oauth-return-sticky-settings
+LiveDeck v0.8.10
 
-主な変更
-- MirrativからXへ認証した後、MirrativのOAuth callback処理完了を検知して認証子ウィンドウを閉じ、元のMirrativ枠を自動再読込するようにしました。
-- X側の「アクセス権限がありません」等の最終ページが残っていても、Mirrativ callbackが成立済みならログイン状態を元枠へ反映できるようにしました。
-- 設定画面は内容部分だけをスクロールし、「キャンセル」「保存」を下部固定で常時操作できるようにしました。
+Setupの表示品質を改善しました。
 
-更新方式
-- v0.8.8からv0.8.9は署名済みdelta packageで更新します。
-- Full SetupはGitHubへ公開せず、最新Full Setupは https://dl.irodoli.com/ のみです。
-- delta chain不一致、base不一致、検証/health-check失敗時はConoHa Full Setupへ誘導します。
+- ショートカット選択画面で前のページの文字や部品が残ることがある問題を修正
+- Setupの日本語フォントサイズと密度を調整
+- LiveDeckアイコン中央の再生マークを小さい表示でも見分けやすく調整
 
-検証
-- Linux final verify: 145/145 PASS
-- Setup/product focused after measured pins: 21/21 PASS
-- Windows package summary: PASS / parser errors 0 / embed verifier PASS
-- Windows GUI focused acceptanceはApplication Controlがunsigned candidateを起動前に遮断したため未自動化。
+アプリ本体の配信閲覧機能・Updater契約はv0.8.9から変更していません。

@@ -1,9 +1,11 @@
-LiveDeck v0.8.10
+LiveDeck v0.8.11
 
-Setupの表示品質を改善しました。
+Beta-first更新基盤と製品UIを更新しました。
 
-- ショートカット選択画面で前のページの文字や部品が残ることがある問題を修正
-- Setupの日本語フォントサイズと密度を調整
-- LiveDeckアイコン中央の再生マークを小さい表示でも見分けやすく調整
+- アプリ内でBeta版の受信をON/OFFできるようにし、Stable / Betaの更新feedを分離
+- 更新manifestの署名、SHA-256、size、trusted HTTPS URL検証をStable/Betaで共通化
+- BetaをOFFにしたときのStable復帰・Full Setup復旧導線を追加
+- 製品ページで採用した4画面＋ネイビー再生マークのLiveDeckアイコンへアプリ、Setup、ショートカットを統一
+- 設定画面に右上の×を追加し、下部の「キャンセル」を「閉じる」に変更して閉じ方を明確化
 
-アプリ本体の配信閲覧機能・Updater契約はv0.8.9から変更していません。
+既存のdelta方式は維持し、v0.8.10からは差分更新で新しいLiveDeck.icoも反映します。

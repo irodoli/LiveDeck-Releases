@@ -1,12 +1,9 @@
-LiveDeck v0.9.0-beta.1
+LiveDeck v0.9.0-beta.3
 
-Chat View / Privacy の最初のBetaです。
+- Updater実機ライフサイクル確認専用のBetaです。
+- v0.9.0-beta.2から機能追加はありません。
+- beta.2で導入した physical file / Temp staging / base preflight / rollback 経路をそのまま使用します。
+- beta.1またはbeta.2から、署名・SHA-256・size検証済みのdeltaでbeta.3へ到達できます。
+- Stable v0.8.14は変更していません。
 
-- 配信枠ごとに独立したChat Viewを追加しました。コメントを1本に統合せず、各枠を別々に表示します。
-- 各枠のChat表示ON/OFF、音量、ミュートを個別に操作できます。
-- Chat Viewでは映像表示だけを隠し、配信ページ・ログインセッション・音声接続は維持します。
-- Mirrativは外部コメントURLを作らず、実際の配信ページ内コメントを読み取る方式へ変更しました。
-- 各Chat枠から返信できます。送信はその枠の「送信」またはEnterをユーザーが操作した時だけ行います。
-- Ctrl+Shift+SpaceでLiveDeckを隠し、全枠を一時ミュートするPrivacy機能を追加しました。もう一度押すと元の表示・音声状態へ戻ります。
-
-実Mirrativのログイン後コメントについては、Beta利用中の実セッションで投稿者名・本文・新着追従を最終確認します。取得できない場合も他枠へ混ぜず、その枠だけ状態を表示します。
+このBetaの目的は、実Installed環境で 検出 -> 取得 -> staging -> 終了 -> swap -> 再起動 を確認することです。

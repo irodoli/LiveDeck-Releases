@@ -1,9 +1,6 @@
-LiveDeck v0.9.0-beta.3
+LiveDeck v0.9.0-beta.5
 
-- Updater実機ライフサイクル確認専用のBetaです。
-- v0.9.0-beta.2から機能追加はありません。
-- beta.2で導入した physical file / Temp staging / base preflight / rollback 経路をそのまま使用します。
-- beta.1またはbeta.2から、署名・SHA-256・size検証済みのdeltaでbeta.3へ到達できます。
+- Updater実機ライフサイクル確認専用のidentity-only Betaです。
+- コメント専用の細幅UI、横/縦レイアウト、3/5/10/15/20行表示、アクティブ欄への定型文はbeta.4から継承します。
+- beta.4で修正したASAR内swap helper読取を使い、アプリ内delta更新をSurfaceで確認します。
 - Stable v0.8.14は変更していません。
-
-このBetaの目的は、実Installed環境で 検出 -> 取得 -> staging -> 終了 -> swap -> 再起動 を確認することです。
